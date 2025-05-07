@@ -31,12 +31,36 @@ From the above characteristic table, we can directly write the next state equati
 /* write all the steps invloved */
 
 **PROGRAM**
+```
+module EXP9 (
+  input wire t,        
+  input wire clk,      
+  input wire rst,      
+  output reg q         
+);
+  always @(posedge clk or posedge rst) begin
+    if (rst)
+      q <= 1'b0;        
+    else if (t)
+      q <= ~q;
+    
+  end
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+endmodule
+
+
+```
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+![Screenshot 2025-05-07 085309](https://github.com/user-attachments/assets/bdb7b1bd-3295-482f-801b-aca1b7f34e4a)
+
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+![Screenshot 2025-05-07 085253](https://github.com/user-attachments/assets/0ffd73eb-8a97-4b20-9a39-9c5d8d0779a5)
+
+
 **RESULTS**
+
+Thus the above program logigates is successfully excured and verified in QUTRUS II by using verilog HDL
